@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "eu.ansvar/slovenian-financial-regulation-mcp",
+  "description": "Query ATVP sklepi on capital markets, BS regulacije on banking supervision, and enforcement actions",
+  "repository": {
+    "url": "https://github.com/Ansvar-Systems/slovenian-financial-regulation-mcp",
+    "source": "github"
+  },
+  "homepage": "https://ansvar.eu",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "keywords": [
+    "atvp",
+    "banka-slovenije",
+    "slovenian-financial-regulation",
+    "capital-markets",
+    "banking-supervision",
+    "compliance",
+    "enforcement",
+    "mcp",
+    "ansvar"
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@ansvar/slovenian-financial-regulation-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
