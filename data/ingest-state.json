@@ -1,0 +1,25 @@
+{
+  "processedUrls": [
+    "https://www.a-zn.si/zakonodaja-in-smernice/podzakonski-predpisi/podzakonski-predpisi-zzavar-1/",
+    "https://www.a-zn.si/zakonodaja-in-smernice/podzakonski-predpisi/podzakonski-predpisi-zpiz-2/",
+    "https://www.a-zn.si/zakonodaja-in-smernice/podzakonski-predpisi/podzakonski-predpisi-zozp/",
+    "https://www.a-zn.si/zakonodaja-in-smernice/podzakonski-predpisi/podzakonski-predpisi-arhiv-zzavar/",
+    "https://www.a-zn.si/zakonodaja-in-smernice/stalisca-agencije/",
+    "https://www.a-zn.si/zavarovalnice-pokojninske-druzbe/postopek-nadzornega-pregleda/izreceni-ukrepi/",
+    "https://www.a-zn.si/zastopniki-in-posredniki/stalisca-obvestila-agencije/izreceni-ukrepi/"
+  ],
+  "lastRun": "2026-03-23T18:16:07.239Z",
+  "provisionsIngested": 128,
+  "enforcementsIngested": 15,
+  "stalisceIngested": 45,
+  "errors": [
+    "Failed to fetch https://www.atvp.si/si/e-zakonodaja/e-ztfi-1",
+    "Failed to fetch https://www.atvp.si/e-ZUAIS",
+    "Failed to fetch https://www.atvp.si/e-zakonodaja/e-zisdu-3",
+    "Failed to fetch https://www.atvp.si/e-Sklep-o-poslovanju-druzbe-za-upravljanje",
+    "Failed to fetch https://www.atvp.si/e-Sklep_o_kljucnih_elementih_investicijskega_sklada_ter_tipih_in_vrstah_investicijskih_skladov",
+    "Failed to fetch https://www.atvp.si/si/stalisca-agencije/zakon-o-trgu-financnih-instrumentov",
+    "Failed to fetch https://www.atvp.si/si/stalisca-agencije/zakon-o-prevzemih",
+    "Failed to fetch ATVP enforcement page"
+  ]
+}
