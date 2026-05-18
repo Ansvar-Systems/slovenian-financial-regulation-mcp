@@ -11,6 +11,8 @@
  */
 
 import Database from "better-sqlite3";
+import { existsSync, mkdirSync } from "node:fs";
+import { dirname } from "node:path";
 
 const DB_PATH = process.env["ATVP_DB_PATH"] ?? "data/atvp.db";
 
@@ -134,13 +136,17 @@ let _db: Database.Database | null = null;
 
 export function getDb(): Database.Database {
   if (_db) return _db;
-  // Read-only: DB is baked into the image at build time via the ingestion
-  // pipeline; runtime never writes. Container rootfs is read_only:true (per
-  // mcp-defaults compose anchor), so opening write-mode + setting WAL +
-  // execing CREATE TABLE IF NOT EXISTS would fail with "unable to open
-  // database file". SCHEMA_SQL is exported for use by the offline ingestion
-  // scripts, not at runtime.
-  _db = new Database(DB_PATH, { readonly: true, fileMustExist: true });
+
+  const dir = dirname(DB_PATH);
+  if (!existsSync(dir)) {
+    mkdirSync(dir, { recursive: true });
+  }
+
+  _db = new Database(DB_PATH);
+  _db.pragma("journal_mode = WAL");
+  _db.pragma("foreign_keys = ON");
+  _db.exec(SCHEMA_SQL);
+
   return _db;
 }
 
