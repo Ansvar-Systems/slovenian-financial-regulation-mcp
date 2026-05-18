@@ -2,11 +2,11 @@
   "name": "@ansvar/slovenian-financial-regulation-mcp",
   "version": "0.1.0",
   "mcpName": "eu.ansvar/slovenian-financial-regulation-mcp",
-  "description": "Slovenian financial regulation MCP server — ATVP sklepi on capital markets, BS regulacije on banking supervision, and enforcement actions",
+  "description": "Slovenian financial regulation MCP server \u2014 ATVP sklepi on capital markets, BS regulacije on banking supervision, and enforcement actions",
   "type": "module",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "slovenian-financial-regulation-mcp": "dist/src/index.js"
+    "slovenian-financial-regulation-mcp": "dist/index.js"
   },
   "files": [
     "dist",
@@ -40,11 +40,13 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/http-server.ts",
-    "start": "node dist/src/http-server.js",
+    "start": "node dist/http-server.js",
     "seed": "npx tsx scripts/seed-sample.ts",
-    "ingest": "npx tsx scripts/ingest-atvp.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "test:contract": "echo \"No contract tests yet\" && exit 0",
+    "coverage:update": "tsx scripts/update-coverage.ts",
+    "coverage:verify": "tsx scripts/verify-coverage.ts"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.12",
